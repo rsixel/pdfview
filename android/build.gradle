@@ -43,6 +43,6 @@ android {
 }
 
 dependencies{
-    compile 'com.github.rsixel:ConvertWebViewToPdfDemo:1.0.5'
+    compile 'com.github.rsixel:ConvertWebViewToPdfDemo:1.0.6'
 
 }
