@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - pdfview (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `.symlinks/flutter/ios`)
+  - pdfview (from `.symlinks/plugins/pdfview/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+  pdfview:
+    :path: ".symlinks/plugins/pdfview/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
+  pdfview: 4813128b4bc1c42669aea5302a512f3f9755d64e
+
+PODFILE CHECKSUM: 05093f744d276d45fa035b43be0d194a16cc8606
+
+COCOAPODS: 1.5.3
