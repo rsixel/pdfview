@@ -1,8 +1,11 @@
 name: pdfview
 description: A new flutter plugin project.
-version: 0.0.1
+version: 0.0.2
 author:
 homepage:
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
 
 dependencies:
   flutter:

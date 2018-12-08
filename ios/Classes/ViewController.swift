@@ -9,17 +9,30 @@
 import UIKit
 import WebKit
 
-class ViewController : UIViewController, WKNavigationDelegate {
+class ViewController : UIViewController, UIScrollViewDelegate, WKNavigationDelegate {
 
     var wkWebView: WKWebView!
     //@IBOutlet weak var uiWebView: UIWebView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        wkWebView = WKWebView()
+    
+        let scrollView = UIScrollView()
+        
+        scrollView.addSubview(wkWebView);
+        
+        view.addSubview(scrollView)
+        
+        //scrollView.delegate = self
+        //scrollView.addSubview(wkWebView)
+    }
     
     func generateAndLoad(file: String) {
-        wkWebView = WKWebView()
         let html = HTML.get(from: file)
         //uiWebView.loadHTMLString(html, baseURL: Bundle.main.bundleURL)
-        wkWebView.loadHTMLString(html, baseURL: Bundle.main.bundleURL)
+        wkWebView.loadHTMLString(file, baseURL: Bundle.main.bundleURL)
     }
 //
 //    // MARK: IBActions
@@ -51,6 +64,7 @@ class ViewController : UIViewController, WKNavigationDelegate {
     func showPDF() {
         let wkPDFData = PDF.generate(using: self.wkWebViewPrintFormatter())
         self.loadIntoWKWebView(wkPDFData)
+        
         
 //        let uiPDFData = PDF.generate(using: self.uiWebViewPrintFormatter())
 //        self.loadIntoUIWebView(uiPDFData)
